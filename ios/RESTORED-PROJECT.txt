@@ -1,0 +1,13 @@
+Photo iOS project restored 4 November 2026
+
+Open App/App.xcodeproj in Xcode. Select the App scheme, choose an iPad simulator, and press Command-R. Let Xcode download Capacitor 8.6.0 when prompted. No distribution signing or archive is needed for Simulator.
+
+Bundle ID: com.photo.mobile
+Display name: Photo
+Website: https://antiquewhite-hornet-229089.hostingersite.com/
+
+Includes mobile table/dialog CSS, pull-to-refresh with timeout/reset, isolated website WebView, native WebKit file input, location/camera/photo library usage descriptions, and leaf app/launch icon.
+
+Validation: project and plist syntax, storyboard XML, and pull-refresh tests passed. Full Xcode build was blocked by the automation sandbox accessing Swift package cache; run in Xcode to verify. Gallery, GPS and authenticated uploads require testing. No archive or upload performed.
+
+Startup correction: SceneDelegate now instantiates PhotoViewController. The isolated website view is placed in a visible container instead of inside the hidden Capacitor root WebView. Rebuild and rerun on the device to verify.

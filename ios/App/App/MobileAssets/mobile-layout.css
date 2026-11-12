@@ -1,0 +1,47 @@
+/* Mobile corrections for the site's existing CivicTrack components. */
+@media (max-width: 760px) {
+  html, body, #app { max-width: 100%; overflow-x: clip !important; }
+  .main-content { min-width: 0 !important; max-width: 100%; overflow-x: hidden !important; }
+  .main-content > *, .reference-admin-table { min-width: 0; max-width: 100%; box-sizing: border-box; }
+  .table-wrap, .reference-admin-table .table-wrap {
+    width: 100% !important; max-width: 100% !important; min-width: 0 !important;
+    margin-left: 0 !important; margin-right: 0 !important;
+    overflow-x: auto !important; overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .reference-row-menu { flex-direction: column; align-items: flex-end; }
+  .reference-action-list { position: static !important; margin-top: 8px; max-width: calc(100vw - 64px); }
+  .table-wrap table { width: 100%; min-width: 600px; }
+  .table-wrap th, .table-wrap td { white-space: normal; overflow-wrap: break-word; }
+  .page-header, .detail-header { flex-wrap: wrap; align-items: flex-start; gap: 12px; }
+  .page-header > div, .detail-header > div { min-width: 0; flex: 1 1 220px; }
+  .page-header .primary-button { flex-shrink: 0; white-space: nowrap; margin-top: 0 !important; }
+  .toolbar-row, .filter-bar { min-width: 0; max-width: 100%; flex-wrap: wrap; }
+  .toolbar-row > *, .filter-bar > * { min-width: 0; max-width: 100%; }
+  .toolbar-row input, .filter-bar input { width: 100%; min-width: 0; }
+  [data-slot="dialog-content"]:not([data-slot="sheet-content"]), .reference-dialog, .photo-action-dialog {
+    box-sizing: border-box !important;
+    width: calc(100vw - 24px) !important; max-width: calc(100vw - 24px) !important;
+    min-width: 0 !important; max-height: calc(100dvh - 24px) !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 20px 16px !important; overflow-x: hidden !important; overflow-y: auto !important;
+    overscroll-behavior: contain;
+  }
+  [data-slot="dialog-content"] > *, .reference-dialog > *, .phase-form, .phase-form > *, .phase-form label {
+    min-width: 0 !important; max-width: 100%; box-sizing: border-box;
+  }
+  .phase-form, .phase-form.inline, .photo-action-form { grid-template-columns: minmax(0, 1fr) !important; }
+  .phase-form input:not([type="checkbox"]):not([type="radio"]), .phase-form select, .phase-form textarea,
+  [data-slot="dialog-content"] form input:not([type="checkbox"]):not([type="radio"]),
+  [data-slot="dialog-content"] form select, [data-slot="dialog-content"] form textarea {
+    box-sizing: border-box !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important;
+  }
+  .phase-form textarea { resize: vertical; }
+  .phase-form input[type="file"] { padding: 10px; white-space: normal; font-size: 14px; }
+  [data-slot="dialog-header"] { padding-right: 24px; text-align: left; }
+  [data-slot="dialog-description"], .phase-form small, .phase-form p, .phase-form label {
+    white-space: normal !important; overflow-wrap: anywhere;
+  }
+  .dialog-actions, [data-slot="dialog-footer"] { flex-wrap: wrap; gap: 10px; }
+  .dialog-actions > button { flex: 1 1 120px; min-height: 44px; }
+}
